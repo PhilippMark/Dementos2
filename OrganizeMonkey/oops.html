@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 11;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #a94442;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #fadeMe {
+            opacity: 0.5;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+
+        #errorMgs {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+            margin-top: -146px;
+            /*margin-left: -131px;*/
+            z-index: 12;
+        }
+
+        #errorMgs2 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+            margin-top: +135px;
+            /*margin-left: -292px;*/
+            z-index: 12;
+        }
+
+        #profile-img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -47px;
+            z-index: 12;
+        }
+    </style>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () { window.location = "default.aspx"; }, 5000);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="fadeMe"></div>
+    <img id="profile-img" src="styles/MonkeyNeu.png" height="100px" />
+    <div id="errorMgs"><h2 style="color: #a94442">Ein Fehler ist aufgetreten :(</h2></div>
+    <div id="errorMgs2"><h3 style="color: #a94442">Sie werden in 5 Sekunden auf die Login-Seite weitergeleitet</h3></div>
+</body>
+</html>
